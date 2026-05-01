@@ -1,4 +1,5 @@
 <script>
+
 	import "./layout.css";
 	import favicon from "$lib/assets/favicon.svg";
 	import Logo from "$lib/assets/img/Logo.webp";
