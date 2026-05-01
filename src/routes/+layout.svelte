@@ -1,13 +1,15 @@
 <script>
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
-	import Font from '$lib/assets/style/style.css'
 	import Logo from '$lib/assets/img/Logo.webp'
+	// import Card1 from '$lib/assets/img/4.svg'
 	
 	let { children } = $props();
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
+<svelte:head>
+	<link rel="icon" href={favicon} /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</svelte:head>
 
 
 <nav class="relative bg-[#fff3f2] after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
@@ -30,11 +32,11 @@
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
             <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-            <a href="#" aria-current="page" class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-black">หน้าหลัก</a>
+            <a href="#" aria-current="page" class=" px-3 py-2 text-md font-medium text-black hover:text-[#e464a0]">หน้าหลัก</a>
 			 <div class="flex shrink-0 items-center">
-          <img src="{Logo}" alt="Tanabata" class="h-8 w-auto" />
+          <img src="{Logo}" alt="Tanabata" class="h-10 w-auto" />
         </div>
-            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-black">แสดงการ์ด</a>
+            <a href="#" class="rounded-md px-3 py-2 text-md font-medium text-black hover:bg-white/5 hover:text-[#e464a0]">แสดงการ์ด</a>
           </div>
         </div>
       </div>
