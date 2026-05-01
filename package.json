@@ -10,12 +10,16 @@
 		"prepare": "svelte-kit sync || echo ''"
 	},
 	"devDependencies": {
-		"svelte": "^5.55.2",
 		"@sveltejs/adapter-auto": "^7.0.1",
 		"@sveltejs/kit": "^2.57.0",
 		"@sveltejs/vite-plugin-svelte": "^7.0.0",
-		"tailwindcss": "^4.2.2",
 		"@tailwindcss/vite": "^4.2.2",
+		"svelte": "^5.55.2",
+		"tailwindcss": "^4.2.2",
 		"vite": "^8.0.7"
+	},
+	"dependencies": {
+		"sakura-js": "^1.1.1",
+		"seasonalfx": "^0.2.2"
 	}
 }

@@ -1,58 +1,129 @@
 <script>
-	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
-	import Logo from '$lib/assets/img/Logo.webp'
-	// import Card1 from '$lib/assets/img/4.svg'
-	
+	import "./layout.css";
+	import favicon from "$lib/assets/favicon.svg";
+	import Logo from "$lib/assets/img/Logo.webp";
+
 	let { children } = $props();
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="icon" href={favicon} /><link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+	/>
 </svelte:head>
 
+<nav
+	class="container mx-auto mt-5 relative bg-[#fff3f2] after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10 rounded-3xl"
+>
+	<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+		<div class="relative flex h-16 items-center justify-between">
+			<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+				<button
+					type="button"
+					command="--toggle"
+					commandfor="mobile-menu"
+					class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500"
+				>
+					<span class="absolute -inset-0.5"></span>
+					<span class="sr-only">Open main menu</span>
+					<svg
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.5"
+						data-slot="icon"
+						aria-hidden="true"
+						class="size-6 in-aria-expanded:hidden"
+					>
+						<path
+							d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+					<svg
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.5"
+						data-slot="icon"
+						aria-hidden="true"
+						class="size-6 not-in-aria-expanded:hidden"
+					>
+						<path
+							d="M6 18 18 6M6 6l12 12"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+				</button>
+			</div>
+			<div
+				class="flex flex-1 items-center justify-center sm:items-stretch"
+			>
+				<div class="hidden sm:ml-6 sm:block">
+					<div class="flex space-x-4">
+						<!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+						<div
+							class="flex items-center hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-[#e464a0] hover:scale-105"
+						>
+							<a
+								href="#"
+								aria-current="page"
+								class=" px-3 py-2 text-md font-medium text-gray-800 hover:text-[#e464a0]"
+								><i class="fa-solid fa-house"></i> หน้าหลัก</a
+							>
+						</div>
+						<div class="flex shrink-0 items-center">
+							<img
+								src={Logo}
+								alt="Tanabata"
+								class="h-10 w-auto transition-transform duration-900 ease-in-out hover:rotate-[360deg]"
+							/>
+						</div>
+						<div
+							class="flex items-center hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-[#e464a0] hover:scale-50 hover:scale-105"
+						>
+							<a
+								href="#"
+								aria-current="page"
+								class=" px-3 py-2 text-md font-medium text-gray-800 hover:text-[#e464a0]"
+								><i class="fa-solid fa-burst"></i> แสดงการ์ด</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-<nav class="relative bg-[#fff3f2] after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
-  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-    <div class="relative flex h-16 items-center justify-between">
-      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        <button type="button" command="--toggle" commandfor="mobile-menu" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
-          <span class="absolute -inset-0.5"></span>
-          <span class="sr-only">Open main menu</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
-            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
-            <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </button>
-      </div>
-      <div class="flex flex-1 items-center justify-center sm:items-stretch">
-       
-        <div class="hidden sm:ml-6 sm:block">
-          <div class="flex space-x-4">
-            <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-            <a href="#" aria-current="page" class=" px-3 py-2 text-md font-medium text-black hover:text-[#e464a0]">หน้าหลัก</a>
-			 <div class="flex shrink-0 items-center">
-          <img src="{Logo}" alt="Tanabata" class="h-10 w-auto" />
-        </div>
-            <a href="#" class="rounded-md px-3 py-2 text-md font-medium text-black hover:bg-white/5 hover:text-[#e464a0]">แสดงการ์ด</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
-    <div class="space-y-1 px-2 pt-2 pb-3">
-      <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-      <a href="#" aria-current="page" class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">Dashboard</a>
-      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Team</a>
-      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Projects</a>
-      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Calendar</a>
-    </div>
-  </el-disclosure>
+	<el-disclosure id="mobile-menu" hidden class="block sm:hidden">
+		<div class="space-y-1 px-2 pt-2 pb-3">
+			<!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+			<a
+				href="#"
+				aria-current="page"
+				class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white"
+				>Dashboard</a
+			>
+			<a
+				href="#"
+				class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+				>Team</a
+			>
+			<a
+				href="#"
+				class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+				>Projects</a
+			>
+			<a
+				href="#"
+				class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+				>Calendar</a
+			>
+		</div>
+	</el-disclosure>
 </nav>
-
 
 {@render children()}
