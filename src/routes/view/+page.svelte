@@ -1,22 +1,28 @@
-<span class=" w-screen h-screen bg-amber-800 m-0 p-0 flex">
-    <div class=" w-1/3 h-auto flex justify-center items-center bg-pink-300">
-        <div class=" w-3/5 h-2/3 flex flex-col p-0 rounded-4xl overflow-hidden bg-red-600">
-            <div class=" w-auto h-1/6 flex justify-center items-center p-0 bg-white">
-                <p class=" text-2xl">
+<span class=" w-screen h-screen m-0 p-0 flex">
+    <div class=" w-1/3 h-auto flex justify-center items-center">
+        <div class=" w-3/5 h-2/3 flex flex-col p-0 rounded-4xl overflow-hidden ">
+            <div class=" w-auto h-1/6 flex justify-center items-center p-0 ">
+                <p class=" text-2xl cursor-default">
                     ใบอธิษฐานของคุณ
                 </p>
             </div>
-            <div class=" w-auto h-2/3 flex flex-col justify-center items-center p-0 bg-gray-600">
-                <img src="" alt="">
+            <div class=" w-auto h-4/9 flex flex-col justify-center items-center p-0">
+                <div class=" w-2/3 h-full bg-contain bg-no-repeat bg-center bg-[url('/img/card.webp')]">
+
+                </div>
             </div>
-            <div class=" w-auto h-1/6 flex justify-center items-center p-0 bg-blue-600">
-                <button class=" w-2/3 h-1/3 flex justify-center items-center rounded-4xl bg-pink-300">
-                    ปิดคำอธิฐาน
-                </button>
+            <div class=" w-auto h-1/6 flex justify-center items-center p-0 ">
+                <a href="/" class=" w-2/3 h-1/3 flex">
+                    <button class=" w-full h-full flex justify-center items-center gap-2 rounded-4xl bg-pink-400 text-white transition delay-50 duration-200 ease-in
+                    hover:bg-pink-600 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-x-icon lucide-circle-x"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
+                        ปิดคำอธิฐาน
+                    </button>
+                </a>
             </div>
         </div>
     </div>
     <div class=" w-2/3 h-auto">
-        
+
     </div>
 </span>
