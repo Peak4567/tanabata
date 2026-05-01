@@ -38,7 +38,7 @@
          <div class="card-1">
             <button
                onclick={() => {cardClick(0)}}
-               class="absolute top-[15rem] left-[10rem] lg:left-[50rem] w-10 hover:scale-110"
+               class="absolute top-[400px] left-[20rem] lg:left-[54rem] w-10 hover:scale-110"
             >
                <div
                   class="bg-red-500 rounded-full w-5 h-5 flex item-center justify-center text-white absolute"
@@ -48,7 +48,7 @@
                <img src={images[0].src} alt="" class="" />
             </button>
             <button onclick={() => {cardClick(1)}}
-               class="absolute top-[5rem] left-[100px] lg:left-[50rem] w-10 hover:scale-110"
+               class="absolute top-[300px] left-[100px] lg:left-[50rem] w-10 hover:scale-110"
             >
                <div
                   class="bg-red-500 rounded-full w-5 h-5 flex item-center justify-center text-white absolute"
@@ -58,7 +58,7 @@
                <img src={images[1].src} alt="" class="" />
             </button>
             <button onclick={() => {cardClick(2)}}
-               class="absolute top-[300px] left-90 lg:left-[50rem] w-10 hover:scale-110"
+               class="absolute top-[500px] left-90 lg:left-[50rem] w-10 hover:scale-110"
             >
                <div
                   class="bg-red-500 rounded-full w-5 h-5 flex item-center justify-center text-white absolute"
@@ -68,7 +68,7 @@
                <img src={images[2].src} alt="" class="" />
             </button>
             <button onclick={() => {cardClick(3)}}
-               class="absolute top-[100px] left-90 lg:left-[40rem] w-10 hover:scale-110"
+               class="absolute top-[400px] left-90 lg:left-[40rem] w-10 hover:scale-110"
             >
                <div
                   class="bg-red-500 rounded-full w-5 h-5 flex item-center justify-center text-white absolute"
@@ -80,7 +80,7 @@
          </div>
          <div class="card-2">
             <button onclick={() => {cardClick(4)}}
-               class="absolute top-[15rem] left-[30rem] lg:left-[40rem] w-10 hover:scale-110"
+               class="absolute top-[500px] left-[30rem] lg:left-[40rem] w-10 hover:scale-110"
             >
                <div
                   class="bg-red-500 rounded-full w-5 h-5 flex item-center justify-center text-white absolute"
@@ -90,7 +90,7 @@
                <img src={images[0].src} alt="" class="" />
             </button>
             <button onclick={() => {cardClick(5)}}
-               class="absolute top-[20px] left-[40rem] lg:left-[60rem] w-10 hover:scale-110"
+               class="absolute top-[400px] left-[40rem] lg:left-[60rem] w-10 hover:scale-110"
             >
                <div
                   class="bg-red-500 rounded-full w-5 h-5 flex item-center justify-center text-white absolute"
@@ -100,7 +100,7 @@
                <img src={images[1].src} alt="" class="" />
             </button>
             <button onclick={() => {cardClick(6)}}
-               class="absolute top-[40px] left-[30rem] lg:left-[30rem] w-10 hover:scale-110"
+               class="absolute bottom-[500px] left-[30rem] lg:left-[34rem] w-10 hover:scale-110"
             >
                <div
                   class="bg-red-500 rounded-full w-5 h-5 flex item-center justify-center text-white absolute"
@@ -109,6 +109,9 @@
                </div>
                <img src={images[1].src} alt="" class="" />
             </button>
+         </div>
+         <div class="flex justify-center">
+               <img src="/img/tree.webp" alt="" class="w-200 mb-50">
          </div>
       </div>
    </div>

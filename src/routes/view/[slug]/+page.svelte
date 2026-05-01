@@ -1,17 +1,20 @@
 <script>
     import { onMount } from "svelte";
     import { page } from '$app/state';
-    let cardArray = $state([]);
+    import Cards from "$lib/Cards.svelte";
 
+    let cardArray = $state([]);
+    let name = $state("");
+    let blessing = $state("");
     onMount(() => {
-        cardArray = JSON.parse(localStorage.getItem("blessingData"))
+        cardArray = JSON.parse(localStorage.getItem("blessingData")) || [];
+        const slug = page.params.slug;
+        name = cardArray[slug-1].name
+        blessing = cardArray[slug -1].blessing
     })
 
-    const slug = page.params.slug;
-
-
 </script>
-<div class=" w-screen h-[850px] m-0 p-0 flex">
+<div class=" w-screen h-[850px] m-0 p-0 flex ">
     <div class=" w-1/3 h-auto flex justify-center items-center">
         <div class=" w-3/5 h-2/3 flex flex-col justify-center p-0 rounded-4xl overflow-hidden bg-white">
             <div class=" w-auto h-1/6 flex justify-center items-center p-0">
@@ -22,8 +25,9 @@
             <div class=" w-auto h-2/3 flex flex-col justify-center items-center p-0">
                 <div class=" w-2/3 h-full bg-contain bg-no-repeat bg-center bg-[url('/img/card.webp')] flex flex-col items-center pt-30">
                     <p class=" text-2xl">
-                        
+                    {name}
                     </p>
+                    {blessing}
                 </div>
             </div>
             <div class=" w-auto h-1/6 flex justify-center items-center p-0 ">
@@ -38,6 +42,7 @@
         </div>
     </div>
     <div class=" w-2/3 h-auto">
-
+        <!-- <img src="/img/tree.webp" alt=""> -->
+        <Cards/>
     </div>
 </div>

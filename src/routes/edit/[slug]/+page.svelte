@@ -1,5 +1,4 @@
 <script>
-    import { redirect } from "@sveltejs/kit";
     import { goto } from '$app/navigation';
     import {onMount} from "svelte";
     import { page } from '$app/state';
@@ -12,14 +11,16 @@
     let name = $state("");
     let blessing = $state("");
     const slug = page.params.slug;
-    console.log(slug)
 
-    
+
     function addCard() {
 
         cardArray[slug - 1].name = name;
         cardArray[slug -1].blessing = blessing;
-        cardArray[slug -1].status = true;
+
+        if(name != "" || blessing != ""){
+            cardArray[slug -1].status = true;
+        }
 
         localStorage.setItem("blessingData", JSON.stringify(cardArray));
 
@@ -30,8 +31,8 @@
 
 <div class="flex justify-center mt-7">
     <div>
-        <img src="./img/Tanzuka.webp" alt="Tanzuka" class="w-100 h-180">
-        <div class="w-100 h-160 absolute top-47">
+        <img src="/img/Tanzuka.webp" alt="Tanzuka" class="w-100 h-180">
+        <div class="w-100 h-160 absolute top-47 ">
             <h1 class="text-center mt-30 text-[28px] mb-3">เขียนคำอธิษฐาน</h1>
 
             <label for="name" class="ml-10 text-[20px]">ชื่อของคุณ</label>
