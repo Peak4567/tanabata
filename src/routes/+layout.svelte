@@ -1,7 +1,7 @@
 <script>
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
-	import Font from '$lib/assets/style/style.css'
+	
 	import Logo from '$lib/assets/img/Logo.webp'
 	
 	let { children } = $props();
