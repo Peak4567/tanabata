@@ -1,3 +1,16 @@
+<script>
+    import { onMount } from "svelte";
+    import { page } from '$app/state';
+    let cardArray = $state([]);
+
+    onMount(() => {
+        cardArray = JSON.parse(localStorage.getItem("blessingData"))
+    })
+
+    const slug = page.params.slug;
+
+
+</script>
 <div class=" w-screen h-[850px] m-0 p-0 flex">
     <div class=" w-1/3 h-auto flex justify-center items-center">
         <div class=" w-3/5 h-2/3 flex flex-col justify-center p-0 rounded-4xl overflow-hidden bg-white">

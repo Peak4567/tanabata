@@ -2,29 +2,24 @@
     import { redirect } from "@sveltejs/kit";
     import { goto } from '$app/navigation';
     import {onMount} from "svelte";
+    import { page } from '$app/state';
 
     let cardArray = $state([]);
     onMount(() => {
-        cardArray = JSON.parse(localStorage.getItem("blessingData")) || [];
+        cardArray = JSON.parse(localStorage.getItem("blessingData"));
     })
 
     let name = $state("");
     let blessing = $state("");
+    const slug = page.params.slug;
+    console.log(slug)
 
     
-
-    let cardObj = {
-        name: "",
-        blessing: "",
-        status: true
-    }
-
     function addCard() {
 
-        cardObj["name"] = name;
-        cardObj["blessing"] = blessing;
-
-        cardArray.push(cardObj);
+        cardArray[slug - 1].name = name;
+        cardArray[slug -1].blessing = blessing;
+        cardArray[slug -1].status = true;
 
         localStorage.setItem("blessingData", JSON.stringify(cardArray));
 

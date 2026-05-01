@@ -11,8 +11,14 @@
    function cardClick(index) {
       let item = cardArray[index]
       console.log(item)
+      if(item.status === false){
+         goto('/edit/' + (index+1))
+      }else{
+         goto('/view/'+ (index+1))
+      }
+      localStorage.setItem("blessingData",JSON.stringify(cardArray))
+    
    }
-
    onMount(() => {
       cardArray = JSON.parse(localStorage.getItem("blessingData")) || [
          { name: "", blessing: "", status: false },
@@ -61,7 +67,7 @@
                </div>
                <img src={images[2].src} alt="" class="" />
             </button>
-            <button onclick={() => {cardClick(0)}}
+            <button onclick={() => {cardClick(3)}}
                class="absolute top-[100px] left-90 lg:left-[40rem] w-10 hover:scale-110"
             >
                <div
@@ -73,7 +79,7 @@
             </button>
          </div>
          <div class="card-2">
-            <button
+            <button onclick={() => {cardClick(4)}}
                class="absolute top-[15rem] left-[30rem] lg:left-[40rem] w-10 hover:scale-110"
             >
                <div
@@ -83,7 +89,7 @@
                </div>
                <img src={images[0].src} alt="" class="" />
             </button>
-            <button
+            <button onclick={() => {cardClick(5)}}
                class="absolute top-[20px] left-[40rem] lg:left-[60rem] w-10 hover:scale-110"
             >
                <div
@@ -93,7 +99,7 @@
                </div>
                <img src={images[1].src} alt="" class="" />
             </button>
-            <button
+            <button onclick={() => {cardClick(6)}}
                class="absolute top-[40px] left-[30rem] lg:left-[30rem] w-10 hover:scale-110"
             >
                <div
