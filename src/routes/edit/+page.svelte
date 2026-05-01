@@ -33,20 +33,23 @@
 
 </script>
 
-<div class="flex justify-center mt-10">
-    <div class="w-70 h-110 border">
-        <h1 class="text-center mt-10 text-[20px] mb-7">เขียนคำอธิษฐาน</h1>
+<div class="flex justify-center mt-7">
+    <div>
+        <img src="./img/Tanzuka.webp" alt="Tanzuka" class="w-100 h-180">
+        <div class="w-100 h-160 absolute top-47">
+            <h1 class="text-center mt-30 text-[28px] mb-3">เขียนคำอธิษฐาน</h1>
 
-        <label for="name" class="ml-5 text-[15px]">ชื่อของคุณ</label>
-        <br>
-        <input type="text" id="name" placeholder="กรอกชื่อของคุณ" bind:value={name} class="border rounded-md ml-5 text-[10px] w-60 h-6 pl-3 mb-3">
-        <br>
-        <label for="blessing"class="ml-5 text-[15px]">คำอวยพร</label>
-        <br>
-        <textarea name="blessing" id="blessing" placeholder="เขียนคำอวยพรของคุณที่นี่..." bind:value={blessing} class="border rounded-md ml-5 text-[10px] w-60 h-30 pl-3 pt-2 pr-3"></textarea>
-        <br>
+            <label for="name" class="ml-10 text-[20px]">ชื่อของคุณ</label>
+            <br>
+            <input type="text" id="name" placeholder="กรอกชื่อของคุณ" bind:value={name}  class="border border-gray-500 rounded-md ml-10 text-[15px] w-80 h-8 pl-3 mb-3" required>
+            <br>
+            <label for="blessing"class="ml-10 text-[20px]">คำอวยพร</label>
+            <br>
+            <textarea name="blessing" id="blessing" placeholder="เขียนคำอวยพรของคุณที่นี่..." bind:value={blessing}  class="border border-gray-500 rounded-md ml-10 text-[15px] w-80 h-50 pl-3 pt-2 pr-3" required></textarea>
+            <br>
 
-        <button class="ml-19 border-2 pl-5 pr-5 cursor-pointer rounded-xl mt-5" 
-        onclick={addCard}>อวยพรเลย!</button>
+            <button class="ml-27 pl-8 pr-8 pt-3 pb-3 cursor-pointer rounded-xl mt-5 bg-pink-400 text-white hover:bg-pink-500 text-[20px]" 
+            onclick={addCard}>Make a wish!</button>
+        </div>
     </div>
 </div>
