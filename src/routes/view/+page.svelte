@@ -1,14 +1,16 @@
-<span class=" w-screen h-screen m-0 p-0 flex">
+<div class=" w-screen h-[850px] m-0 p-0 flex">
     <div class=" w-1/3 h-auto flex justify-center items-center">
-        <div class=" w-3/5 h-2/3 flex flex-col p-0 rounded-4xl overflow-hidden ">
-            <div class=" w-auto h-1/6 flex justify-center items-center p-0 ">
+        <div class=" w-3/5 h-2/3 flex flex-col justify-center p-0 rounded-4xl overflow-hidden bg-white">
+            <div class=" w-auto h-1/6 flex justify-center items-center p-0">
                 <p class=" text-2xl cursor-default">
                     ใบอธิษฐานของคุณ
                 </p>
             </div>
-            <div class=" w-auto h-4/9 flex flex-col justify-center items-center p-0">
-                <div class=" w-2/3 h-full bg-contain bg-no-repeat bg-center bg-[url('/img/card.webp')]">
-
+            <div class=" w-auto h-2/3 flex flex-col justify-center items-center p-0">
+                <div class=" w-2/3 h-full bg-contain bg-no-repeat bg-center bg-[url('/img/card.webp')] flex flex-col items-center pt-30">
+                    <p class=" text-2xl">
+                        
+                    </p>
                 </div>
             </div>
             <div class=" w-auto h-1/6 flex justify-center items-center p-0 ">
@@ -25,4 +27,4 @@
     <div class=" w-2/3 h-auto">
 
     </div>
-</span>
+</div>
